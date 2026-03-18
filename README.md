@@ -1,6 +1,6 @@
 # project1
 
-# Project1
+
 
 ## 📌 Description
 This is a simple responsive website with a navbar and hero section.
@@ -24,7 +24,7 @@ This is a simple responsive website with a navbar and hero section.
 3. Open index.html in browser
 
 ## 🌐 Live Demo
-https://your-project-name.netlify.app
+jade-begonia-0758fb.netlify.app
 
 ## 📱 Responsive Design
 Works on mobile, tablet, and desktop screens.
