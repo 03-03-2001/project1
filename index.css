@@ -6,6 +6,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   border: 2px solid black;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -26,7 +27,7 @@ ul {
    color: black;
 }
 .navbar ul li:hover{
-    background-color: aqua;
+    color: #2369a8; 
     cursor: pointer;
 }
 
@@ -43,8 +44,10 @@ ul {
 
 .hero {
   display: flex;
-  margin: 25px;
-  height: 100vh;
+  height: 100vh; 
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
 }
 h1 {
   font-size: 30px;
@@ -60,6 +63,13 @@ button {
   border-radius: 10px;
   margin-top: 15px;
 }
+button:hover{
+    background-color: #0099cc;
+    cursor: pointer;
+}
+.left,.right{
+  flex: 1;
+}
 
 .right {
   margin-left: 50px;
@@ -72,10 +82,13 @@ button {
 }
 
 /* Mobile Responsive */
-@media (max-width: 750px) {
+@media (max-width: 768px) {
+
+  /* Navbar becomes vertical */
   .navbar {
     flex-direction: column;
-    align-items: center;
+    gap: 10px;
+    margin: 10px;
   }
 
   ul {
@@ -83,12 +96,36 @@ button {
     gap: 10px;
   }
 
+  /* Hero section stacks */
   .hero {
+    flex-direction: column;
     text-align: center;
-    padding: 20px;
+    gap: 20px;
+    height: auto;   /* allow scrolling on small screens */
   }
 
-  .container {
-    flex-direction: column;
+  /* Remove side spacing */
+  .right {
+    margin-left: 0;
+  }
+
+  /* Image responsive */
+  .right img {
+    width: 200px;
+    height: auto;
+  }
+
+  /* Text adjustments */
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+    max-width: 200px;
   }
 }
